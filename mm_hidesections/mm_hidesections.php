@@ -39,11 +39,11 @@ function mm_hideSections($sections, $roles = '', $templates = ''){
 					$output .= '$j("#'.$section.'_header, #'.$section.'_body").hide();'."\n";
 				break;
 			}
-			
-			$output .= "\n//  -------------- mm_hideSections :: End ------------- \n";
-			
-			$e->output($output . "\n");
 		}
+		
+		$output .= "\n//  -------------- mm_hideSections :: End ------------- \n";
+		
+		$e->output($output . "\n");
 	}
 }
 ?>
