@@ -1,7 +1,7 @@
 <?php
 /**
  * mm_hideSections
- * @version 1.2 (2013-05-31)
+ * @version 1.2.1 (2014-05-25)
  * 
  * @desc A widget for ManagerManager plugin that allows one or a few sections to be hidden on the document edit page.
  * 
@@ -11,9 +11,9 @@
  * @param $roles {comma separated string} - The roles that the widget is applied to (when this parameter is empty then widget is applied to the all roles). Default: ''.
  * @param $templates {comma separated string} - Id of the templates to which this widget is applied (when this parameter is empty then widget is applied to the all templates). Default: ''.
  * 
- * @link http://code.divandesign.biz/modx/mm_hidesections/1.2
+ * @link http://code.divandesign.biz/modx/mm_hidesections/1.2.1
  * 
- * @copyright 2013
+ * @copyright 2014
  */
 
 function mm_hideSections($sections, $roles = '', $templates = ''){
@@ -25,7 +25,7 @@ function mm_hideSections($sections, $roles = '', $templates = ''){
 		// if we've been supplied with a string, convert it into an array
 		$sections = makeArray($sections);
 		
-		$output = "\n//  -------------- mm_hideSections :: Begin ------------- \n";
+		$output = "//---------- mm_hideSections :: Begin -----\n";
 		
 		foreach($sections as $section){
 			switch ($section){
@@ -41,9 +41,9 @@ function mm_hideSections($sections, $roles = '', $templates = ''){
 			}
 		}
 		
-		$output .= "\n//  -------------- mm_hideSections :: End ------------- \n";
+		$output .= "//---------- mm_hideSections :: End -----\n";
 		
-		$e->output($output . "\n");
+		$e->output($output);
 	}
 }
 ?>
