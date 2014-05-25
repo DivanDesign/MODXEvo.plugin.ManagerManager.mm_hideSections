@@ -5,7 +5,7 @@
  * 
  * @desc A widget for ManagerManager plugin that allows one or a few sections to be hidden on the document edit page.
  * 
- * @uses ManagerManager plugin 0.5.
+ * @uses ManagerManager plugin 0.6.2.
  * 
  * @param $sections {comma separated string} - The id(s) of the sections this should apply to. @required
  * @param $roles {comma separated string} - The roles that the widget is applied to (when this parameter is empty then widget is applied to the all roles). Default: ''.
@@ -29,14 +29,6 @@ function mm_hideSections($sections, $roles = '', $templates = ''){
 		
 		foreach($sections as $section){
 			switch ($section){
-				case 'content':
-					$output .= '$j("#content_header, #content_body").hide();'."\n";
-				break;
-				
-				case 'tvs':
-					$output .= '$j("#tv_header, #tv_body").hide();'."\n";
-				break;
-				
 				case 'access': // These have moved to tabs in 1.0.1
 					$output .= '$j("#sectionAccessHeader, #sectionAccessBody").hide();'."\n";
 				break;
